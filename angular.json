@@ -3,11 +3,11 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "FE": {
+        "tintuc": {
             "projectType": "application",
             "schematics": {
-                "@schematics/angular:application": {
-                    "strict": true
+                "@schematics/angular:component": {
+                    "style": "scss"
                 }
             },
             "root": "",
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/FE",
+                        "outputPath": "dist/tintuc",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -28,12 +28,11 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css",
-                            "node_modules/bootstrap/dist/css/bootstrap.min.css"
-
+                            "src/styles.scss",
+                            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "node_modules/font-awesome/css/font-awesome.min.css"
                         ],
                         "scripts": [
-                            "node_modules/jquery/dist/jquery.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.min.js"
                         ]
                     },
@@ -52,13 +51,13 @@
                             "buildOptimizer": true,
                             "budgets": [{
                                     "type": "initial",
-                                    "maximumWarning": "500kb",
-                                    "maximumError": "1mb"
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "2kb",
-                                    "maximumError": "4kb"
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
                                 }
                             ]
                         }
@@ -67,18 +66,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "FE:build"
+                        "browserTarget": "tintuc:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "FE:build:production"
+                            "browserTarget": "tintuc:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "FE:build"
+                        "browserTarget": "tintuc:build"
                     }
                 },
                 "test": {
@@ -93,7 +92,7 @@
                             "src/assets"
                         ],
                         "styles": [
-                            "src/styles.css"
+                            "src/styles.scss"
                         ],
                         "scripts": []
                     }
@@ -115,16 +114,16 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "FE:serve"
+                        "devServerTarget": "tintuc:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "FE:serve:production"
+                            "devServerTarget": "tintuc:serve:production"
                         }
                     }
                 }
             }
         }
     },
-    "defaultProject": "FE"
+    "defaultProject": "tintuc"
 }

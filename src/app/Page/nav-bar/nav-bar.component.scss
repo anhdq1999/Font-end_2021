@@ -1,0 +1,54 @@
+header {
+    display: flex;
+    justify-content: center;
+    .top_header {
+        height: 50px;
+        background: rgb(26, 26, 26);
+        color: white;
+        line-height: 50px;
+        .calander_icon {
+            float: left;
+            margin-left: 80px;
+            line-height: 50px;
+            margin-right: 15px;
+            margin-top: -1px;
+        }
+        .right_top_header {
+            float: left;
+            line-height: 50px;
+            margin-right: 15px;
+            margin-top: -1px;
+        }
+        .right_sub_top_header {
+            width: 450px;
+            a,
+            p {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+    .title_subject {
+        height: 110px;
+        border-bottom: 1px solid black;
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bolder;
+            line-height: 110px;
+        }
+    }
+    .menu {
+        .nav-link {
+            color: black !important;
+        }
+        a {
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+        a:hover {
+            color: rgb(98, 97, 97) !important;
+            font-size: 1.1rem;
+        }
+    }
+}
