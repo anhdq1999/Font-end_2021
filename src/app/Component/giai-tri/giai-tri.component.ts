@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ ServesHttpService} from '../../Service/service.service'
 
 @Component({
   selector: 'app-giai-tri',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GiaiTriComponent implements OnInit {
 
-  constructor() { }
-
+  constructor( private service:ServesHttpService) { }
+  url = ''
   ngOnInit(): void {
+    this.service.getAll(this.url).subscribe((data)=>{
+      console.log(data)
+    })
   }
 
 }

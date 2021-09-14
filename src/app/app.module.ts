@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TrangChuComponent } from './Component/trang-chu/trang-chu.component';
@@ -59,12 +59,14 @@ import { ComponentDetailComponent } from './Component/component-detail/component
     ChinhTriDetailComponent,
     CongNgheDetailComponent,
     ComponentDetailComponent,
+    
 
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
