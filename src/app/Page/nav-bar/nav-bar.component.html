@@ -7,13 +7,17 @@
       </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-
                         <li class="nav-item">
                             <a routerLink="/trang-chu" class="nav-link" aria-current="page">Trang chủ</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a routerLink="/thoi-su" class="nav-link" aria-current="page">Thời sự</a>
                         </li>
                         <li class="nav-item">
                             <a routerLink="/chinh-tri" class="nav-link" aria-current="page">Chính trị</a>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a routerLink="/kinh-doanh" class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Kinh doanh
@@ -22,83 +26,60 @@
                                 <li><a routerLink="/bat-dong-san" class="dropdown-item">Bất động sản</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item dropdown">
                             <a routerLink="/giai-tri" class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                      Giải trí
                           </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                 <li><a routerLink="/xe" class="dropdown-item">Xe</a></li>
-                                <li><a routerLink="/du-lich" class="dropdown-item">Du lịch</a></li>
+
                                 <li><a routerLink="/talks" class="dropdown-item">Talks</a></li>
+                                <li><a routerLink="/the-thao" class="dropdown-item">Thể thao</a></li>
                             </ul>
                         </li>
+
                         <li routerLink="/the-gioi" class="nav-item ">
                             <a class="nav-link" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Thế giới
             </a>
 
                         </li>
-                        <li routerLink="/giao-duc" class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-         Giáo dục
-            </a>
+
+
+                        <li class="nav-item dropdown">
+                            <a routerLink="/giao-duc" class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     Giáo dục
+                          </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item">Thế giới 24h</a></li>
-                                <li><a class="dropdown-item">Bình luận</a></li>
-                                <li><a class="dropdown-item">Hồ sợ mật</a></li>
-                                <li><a class="dropdown-item">Quân sự</a></li>
-                            </ul>
-                        </li>
-                        <li routerLink="/doi-song" class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-       Đời sống
-            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item">Thể thao 24h</a></li>
-                                <li><a class="dropdown-item">Giải trí</a></li>
+                                <li><a routerLink="/doi-song" class="dropdown-item">Đời sống</a></li>
+
+                                <li><a routerLink="/phap-luat" class="dropdown-item">Pháp luật</a></li>
 
                             </ul>
                         </li>
-                        <li routerLink="/phap-luat" class="nav-item dropdown">
+
+                        <li class="nav-item">
+                            <a routerLink="/cong-nghe" class="nav-link" aria-current="page">Công nghệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a routerLink="/suc-khoe" class="nav-link" aria-current="page">Công nghệ</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-   Pháp luật
-          </a>
+                    Xem thêm
+                          </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item">Thể thao 24h</a></li>
-                                <li><a class="dropdown-item">Giải trí</a></li>
+                                <li><a routerLink="/tuan-vn" class="dropdown-item">Tuần Việt Nam</a></li>
+                                <li><a routerLink="/ban-doc" class="dropdown-item">Bạn đọc</a></li>
+                                <li><a routerLink="/goc-nhin-thang" class="dropdown-item">Góc nhìn thằng</a></li>
+                                <li><a routerLink="/tin-moi-nhat" class="dropdown-item">Tin mới nhất</a></li>
+                                <li><a routerLink="/tin-nong-nhat" class="dropdown-item">Tin nóng nhất</a></li>
 
                             </ul>
                         </li>
-                        <li routerLink="/the-thao" class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-     Thể thao
-          </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item">Thể thao 24h</a></li>
-                                <li><a class="dropdown-item">Giải trí</a></li>
 
-                            </ul>
-                        </li>
-                        <li routerLink="/cong-nghe" class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Công nghệ
-        </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item">Thể thao 24h</a></li>
-                                <li><a class="dropdown-item">Giải trí</a></li>
-
-                            </ul>
-                        </li>
-                        <li routerLink="/suc-khoe" class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-Sức khoẻ
-      </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a class="dropdown-item">Thể thao 24h</a></li>
-                                <li><a class="dropdown-item">Giải trí</a></li>
-
-                            </ul>
-                        </li>
 
                     </ul>
                     <form class="d-flex">

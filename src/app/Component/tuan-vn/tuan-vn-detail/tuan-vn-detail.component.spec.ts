@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DuLichComponent } from './du-lich.component';
+import { TuanVnDetailComponent } from './tuan-vn-detail.component';
 
-describe('DuLichComponent', () => {
-  let component: DuLichComponent;
-  let fixture: ComponentFixture<DuLichComponent>;
+describe('TuanVnDetailComponent', () => {
+  let component: TuanVnDetailComponent;
+  let fixture: ComponentFixture<TuanVnDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DuLichComponent ]
+      declarations: [ TuanVnDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DuLichComponent);
+    fixture = TestBed.createComponent(TuanVnDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

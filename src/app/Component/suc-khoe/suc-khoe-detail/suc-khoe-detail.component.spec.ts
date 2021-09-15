@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentDetailComponent } from './component-detail.component';
+import { SucKhoeDetailComponent } from './suc-khoe-detail.component';
 
-describe('ComponentDetailComponent', () => {
-  let component: ComponentDetailComponent;
-  let fixture: ComponentFixture<ComponentDetailComponent>;
+describe('SucKhoeDetailComponent', () => {
+  let component: SucKhoeDetailComponent;
+  let fixture: ComponentFixture<SucKhoeDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComponentDetailComponent ]
+      declarations: [ SucKhoeDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComponentDetailComponent);
+    fixture = TestBed.createComponent(SucKhoeDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -19,7 +19,6 @@ export interface itemRss {
   gui :  string;
   author :  string;
   thumbnail :  string;
-
   description :  string;
   content:  string;
   enclosure : IRSSenclosure;

@@ -3,6 +3,10 @@ a {
     color: black;
 }
 
+.list-news a {
+    text-decoration: none;
+}
+
 .list-news {
     display: flex;
 }
@@ -20,8 +24,6 @@ a {
                 display: block;
                 height: 235px;
                 width: 350px;
-                // max-height: 235px;
-                // max-width: 350px;
                 border-radius: 5%;
                 object-fit: cover;
             }
@@ -54,10 +56,9 @@ a {
                 word-break: break-word;
             }
             .description {
-                color: red;
                 word-break: break-all;
                 display: -webkit-box;
-                -webkit-line-clamp: 4;
+                -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 text-overflow: ellipsis;

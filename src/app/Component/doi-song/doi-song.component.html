@@ -1,54 +1,84 @@
-<div class="row">
-    <div class="col-xl-6 col-md-12 col-xs-12 left-news">
-        <div class="line-news">
-            <div class="left">
-                <img src="https://vnn-imgs-f.vgcloud.vn/2021/09/11/11/mua-may-tinh-bang-nao-de-yen-tam-hoc-online-mua-gian-cach.jpg" alt="" class="picture">
-            </div>
-            <div class="right">
-                <p class="breadcrumd">
-                    <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Thời sự</span>
-                </p>
-                <p class="title">
-                    Minh chứng sống động phản bác luận điệu
-                </p>
-                <p class="date-public">
-                    <span><i class="fa fa-calendar" aria-hidden="true"></i>
-                  Sat, 11 Sep 2021 16:00:15 +0700
-                </span>
-                </p>
-                <p class="description">
-                    Việc các trường đại học buộc phải đóng cửa, chuyển sang hình thức dạy học trực tuyến vì đại dịch Covid-19 cũng là thời cơ để giáo dục đại học “chuyển mình” mạnh mẽ nhằm thích ứng với công cuộc chuyển đổi số.
-                </p>
-                <hr>
-            </div>
+<div class="list-news">
+    <div class="container-fluid">
+        <div class="row ">
+            <!-- tin bên trái -->
+            <div class="col-xl-8 col-md-8 col-sm-12 left-news">
+                <div (click)="onSelect(item)" *ngFor="let item of dataNews.items; index as i">
+                    <div *ngIf="i <= dataNews.items.length/2-2 ">
+                        <a>
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-xs-12 left-news">
+                                    <div class="line-news">
+                                        <div class="left">
+                                            <img src="{{dataNews.items[i].thumbnail}}" alt="" class="img-fluid picture">
+                                        </div>
+                                        <div class="right">
+                                            <p class="breadcrumd">
+                                                <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {{dataNews.items[i].categories[0]}}</span>
+                                            </p>
+                                            <p class="title">
+                                                {{dataNews.items[i].title}}
+                                            </p>
+                                            <p class="date-public">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        {{dataNews.items[i].pubDate}}
+                                              </span>
+                                            </p>
+                                            <p class="description">
+                                                {{dataNews.items[i].description}}
+                                            </p>
 
+                                            <hr>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- tin bên phải -->
+            <div class="com-xl-4 col-md-4 col-sm-12 right-news">
+                <div (click)="onSelect(item)" *ngFor="let item of dataNews.items; index as i">
+                    <div *ngIf="i > dataNews.items.length/2-2 ">
+
+                        <a>
+                            <div class="row">
+                                <div class="col-xl-12 col-md-12 col-xs-12 left-news">
+                                    <div class="line-news">
+                                        <div class="left">
+                                            <img src="{{dataNews.items[i].thumbnail}}" alt="" class="picture">
+                                        </div>
+                                        <div class="right">
+                                            <p class="breadcrumd">
+                                                <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> {{dataNews.items[i].categories[0]}}</span>
+                                            </p>
+                                            <p class="title">
+                                                {{dataNews.items[i].title}}
+                                            </p>
+                                            <p class="date-public">
+                                                <span><i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        {{dataNews.items[i].pubDate}}
+                                              </span>
+                                            </p>
+                                            <p class="description">
+                                                {{dataNews.items[i].description}}
+                                            </p>
+                                            <hr>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-    </div>
-    <div class="col-xl-6 col-md-12 col-xs-12 right-news">
-        <div class="line-news">
-            <div class="left">
-                <img src="https://vnn-imgs-f.vgcloud.vn/2021/09/11/11/mua-may-tinh-bang-nao-de-yen-tam-hoc-online-mua-gian-cach.jpg" alt="" class="picture">
-            </div>
-            <div class="right">
-                <p class="breadcrumd">
-                    <span><i class="fa fa-dot-circle-o" aria-hidden="true"></i> Thời sự</span>
-                </p>
-                <p class="title">
-                    Minh chứng sống động phản bác luận điệu
-                </p>
-                <p class="date-public">
-                    <span><i class="fa fa-calendar" aria-hidden="true"></i>
-              Sat, 11 Sep 2021 16:00:15 +0700
-            </span>
-                </p>
-                <p class="description">
-                    Việc các trường đại học buộc phải đóng cửa, chuyển sang hình thức dạy học trực tuyến vì đại dịch Covid-19 cũng là thời cơ để giáo dục đại học “chuyển mình” mạnh mẽ nhằm thích ứng với công cuộc chuyển đổi số.
-                </p>
-                <hr>
-            </div>
-
-        </div>
-
     </div>
 </div>

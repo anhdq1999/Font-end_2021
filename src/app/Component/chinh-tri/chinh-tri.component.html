@@ -3,15 +3,14 @@
         <div class="row ">
             <!-- tin bên trái -->
             <div class="col-xl-8 col-md-8 col-sm-12 left-news">
-                <div *ngFor="let item of dataNews.items; index as i">
-                    <div *ngIf="i < dataNews.items.length/2-1 ">
-                        <h1>{{i}} </h1>
-                        <a href="">
+                <div (click)="onSelect(item)" *ngFor="let item of dataNews.items; index as i">
+                    <div *ngIf="i <= dataNews.items.length/2-2 ">
+                        <a>
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-xs-12 left-news">
                                     <div class="line-news">
                                         <div class="left">
-                                            <img src="{{dataNews.items[i].thumbnail}}" alt="" class="picture">
+                                            <img src="{{dataNews.items[i].thumbnail}}" alt="" class="img-fluid picture">
                                         </div>
                                         <div class="right">
                                             <p class="breadcrumd">
@@ -40,15 +39,13 @@
                         </a>
                     </div>
                 </div>
-
-
             </div>
             <!-- tin bên phải -->
             <div class="com-xl-4 col-md-4 col-sm-12 right-news">
-                <div *ngFor="let item of dataNews.items; index as i">
-                    <div *ngIf="i > dataNews.items.length/2-1 ">
-                        <h1>{{i}} </h1>
-                        <a href="">
+                <div (click)="onSelect(item)" *ngFor="let item of dataNews.items; index as i">
+                    <div *ngIf="i > dataNews.items.length/2-2 ">
+
+                        <a>
                             <div class="row">
                                 <div class="col-xl-12 col-md-12 col-xs-12 left-news">
                                     <div class="line-news">
@@ -70,7 +67,6 @@
                                             <p class="description">
                                                 {{dataNews.items[i].description}}
                                             </p>
-
                                             <hr>
                                         </div>
 
@@ -82,8 +78,6 @@
                         </a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>

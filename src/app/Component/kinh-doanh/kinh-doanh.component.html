@@ -1,7 +1,7 @@
 <div class="container list-news">
     <div class="row">
         <div *ngFor="let item of dataNews.items; index as i" class="col-xl-4 col-md-4 col-sm-12 ">
-            <a href="">
+            <a (click)="onSelect(item)">
                 <div class="row">
                     <div class="col-xl-12 col-md-12 col-xs-12 left-news">
                         <div class="line-news">
@@ -34,5 +34,4 @@
             </a>
         </div>
     </div>
-
 </div>
