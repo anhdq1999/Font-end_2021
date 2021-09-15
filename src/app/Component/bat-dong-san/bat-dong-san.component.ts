@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NewsRss } from 'src/app/Service/news';
+import { ServesHttpService } from 'src/app/Service/service.service';
 
 @Component({
   selector: 'app-bat-dong-san',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bat-dong-san.component.scss']
 })
 export class BatDongSanComponent implements OnInit {
+  public dataNews : NewsRss;
 
-  constructor() { }
+  constructor(private service : ServesHttpService, private router :Router ) { }
 
   ngOnInit(): void {
+    this.service.getBatDongSan().subscribe((data)=>{
+      this.dataNews = data;
+    })
+  }
+  onSelect(item : any){
+    this.router.navigate(['/bat-dong-san',item.title])
   }
 
 }
