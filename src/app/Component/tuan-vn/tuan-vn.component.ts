@@ -14,7 +14,7 @@ export class TuanVnComponent implements OnInit {
   constructor(private service : ServesHttpService ,private router :Router ) { }
   
   ngOnInit(): void {
-    this.service.getKinhDoanh().subscribe((data)=>{
+    this.service.getTuanVN().subscribe((data)=>{
       this.dataNews = data;
     })
   }

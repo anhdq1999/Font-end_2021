@@ -80,6 +80,7 @@ const routes: Routes = [
   { path: "tin-moi-nhat/:title", component: TinMoiNhatDetailComponent },
   { path: "tin-nong-nhat", component: TinNongNhatComponent },
   { path: "tin-nong-nhat/:title", component: TinNongNhatDetailComponent },
+  { path: "ban-doc", component: BanDocComponent },
   { path: "ban-doc/:title", component: BanDocDetailComponent },
   { path: "**", component: PageNotFoundComponent },
   

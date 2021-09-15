@@ -1,1 +1,37 @@
-<p>tin-nong-nhat works!</p>
+<div class="container list-news">
+    <div class="row">
+        <div *ngFor="let item of dataNews.items; index as i" class="col-xl-4 col-md-4 col-sm-12 ">
+            <a (click)="onSelect(item)">
+                <div class="row">
+                    <div class="col-xl-12 col-md-12 col-xs-12 left-news">
+                        <div class="line-news">
+                            <div class="left">
+                                <img src="{{dataNews.items[i].thumbnail}}" class="img-fluid picture">
+                            </div>
+                            <div class="right">
+                                <p class="breadcrumd">
+                                    <span>
+                                            <i class="fa fa-dot-circle-o" aria-hidden="true"></i> 
+                                         {{dataNews.items[i].categories[0]}}
+                                        </span>
+                                </p>
+                                <p class="title">
+                                    {{dataNews.items[i].title}}
+                                </p>
+                                <p class="date-public">
+                                    <span><i class="fa fa-calendar" aria-hidden="true"></i>
+                                            {{dataNews.items[i].pubDate}}
+                                    </span>
+                                </p>
+                                <p class="description">
+                                    {{dataNews.items[i].description}}
+                                </p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
