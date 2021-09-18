@@ -25,6 +25,7 @@ export class BanDocDetailComponent implements OnInit {
       this.checkEqual();
     });
   }
+
   // lấy ra title trên url
   getPara(): string {
     let idString = this.route.snapshot.params.title;

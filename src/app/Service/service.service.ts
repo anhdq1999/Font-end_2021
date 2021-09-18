@@ -85,6 +85,9 @@ export class ServesHttpService {
   // rss tin_nong_nhat
   private tin_nong_nhat = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fvietnamnet.vn%2Frss%2Ftin-moi-nong.rss&api_key=rwr7qgkfpar8hckdq10q3ctab06e8fal6id1vkuh&count=20";
 
+  // rss thể thao
+  private rss_the_thao = "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fvietnamnet.vn%2Frss%2Fthe-thao.rss&api_key=rwr7qgkfpar8hckdq10q3ctab06e8fal6id1vkuh&count=20";
+
  
 
   // get json thoi-su
@@ -159,6 +162,10 @@ export class ServesHttpService {
   // get json tinmoinhat
   public getTinMoiNhat(): Observable<any> {
     return this.httpClient.get(this.rss_tin_moi_nhat);
+  }
+  // get json tinmoinhat
+  public getTheThao(): Observable<any> {
+    return this.httpClient.get(this.rss_the_thao);
   }
 
 

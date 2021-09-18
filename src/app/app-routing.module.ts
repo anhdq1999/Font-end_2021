@@ -8,9 +8,7 @@ import { ChinhTriDetailComponent } from "./Component/chinh-tri/chinh-tri-detail/
 import { ChinhTriComponent } from "./Component/chinh-tri/chinh-tri.component";
 import { CongNgheDetailComponent } from "./Component/cong-nghe/cong-nghe-detail/cong-nghe-detail.component";
 import { CongNgheComponent } from "./Component/cong-nghe/cong-nghe.component";
-
 import { DoiSongComponent } from "./Component/doi-song/doi-song.component";
-
 import { GiaiTriDetailComponent } from "./Component/giai-tri/giai-tri-detail/giai-tri-detail.component";
 import { GiaiTriComponent } from "./Component/giai-tri/giai-tri.component";
 import { GiaoDucDetailComponent } from "./Component/giao-duc/giao-duc-detail/giao-duc-detail.component";
@@ -42,47 +40,68 @@ import { XeDetailComponent } from "./Component/xe/xe-detail/xe-detail.component"
 import { XeComponent } from "./Component/xe/xe.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/trang-chu", pathMatch: "full" },
   { path: "trang-chu", component: TrangChuComponent },
+  { path: "", redirectTo: "/trang-chu", pathMatch: "full" },
+  { path: "**", component: PageNotFoundComponent },
+  
   { path: "thoi-su", component: ThoiSuComponent },
   { path: "thoi-su/:title", component: ThoiSuDetailComponent },
+
   { path: "chinh-tri", component: ChinhTriComponent },
   { path: "chinh-tri/:title", component: ChinhTriDetailComponent },
+
   { path: "kinh-doanh", component: KinhDoanhComponent },
   { path: "kinh-doanh/:title", component: KinhDoanhDetailComponent },
+
   { path: "bat-dong-san", component: BatDongSanComponent },
   { path: "bat-dong-san/:title", component: BatDongSanDetailComponent },
+
   { path: "giai-tri", component: GiaiTriComponent },
   { path: "giai-tri/:title", component: GiaiTriDetailComponent },
+
   { path: "xe", component: XeComponent },
   { path: "xe/:title", component: XeDetailComponent },
+
   { path: "talks", component: TalksComponent },
   { path: "talks/:title", component: TalksDetailComponent },
+
   { path: "the-gioi", component: TheGioiComponent },
   { path: "the-gioi/:title", component: TheGioiDetailComponent },
+
   { path: "giao-duc", component: GiaoDucComponent },
   { path: "giao-duc/:title", component: GiaoDucDetailComponent },
+
   { path: "phap-luat", component: PhapLuatComponent },
   { path: "phap-luat/:title", component: PhapLuatDetailComponent },
+
   { path: "the-thao", component: TheThaoComponent },
   { path: "the-thao/:title", component: TheGioiDetailComponent },
+
   { path: "doi-song", component: DoiSongComponent },
   { path: "doi-song/:title", component: DoiSongComponent },
+
   { path: "cong-nghe", component: CongNgheComponent },
   { path: "cong-nghe/:title", component: CongNgheDetailComponent },
+
   { path: "suc-khoe", component: SucKhoeComponent },
   { path: "suc-khoe/:title", component: SucKhoeDetailComponent },
+
   { path: "tuan-vn", component: TuanVnComponent },
   { path: "tuan-vn/:title", component: TuanVnDetailComponent },
+
   { path: "goc-nhin-thang", component: GocNhinThangComponent },
   { path: "goc-nhin-thang/:title", component: GocNhinThangDetailComponent },
+
   { path: "tin-moi-nhat", component: TinMoiNhatComponent },
   { path: "tin-moi-nhat/:title", component: TinMoiNhatDetailComponent },
+
   { path: "tin-nong-nhat", component: TinNongNhatComponent },
   { path: "tin-nong-nhat/:title", component: TinNongNhatDetailComponent },
+
   { path: "ban-doc", component: BanDocComponent },
   { path: "ban-doc/:title", component: BanDocDetailComponent },
-  { path: "**", component: PageNotFoundComponent },
+
+ 
   
   
 ];

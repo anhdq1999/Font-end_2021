@@ -15,7 +15,7 @@ export class TheThaoComponent implements OnInit {
   constructor(private service : ServesHttpService ,private router :Router ) { }
   
   ngOnInit(): void {
-    this.service.getKinhDoanh().subscribe((data)=>{
+    this.service.getTheThao().subscribe((data)=>{
       this.dataNews = data;
     })
   }
