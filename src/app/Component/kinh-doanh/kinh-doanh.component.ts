@@ -21,5 +21,16 @@ export class KinhDoanhComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/kinh-doanh',item.title])
   }
+   // search
+   isShow = true;
+   public term;
+   keyWord() {
+     if (this.term ==''){
+       this.isShow= true;
+     }else{
+       this.isShow = false
+     }
+    
+   }
   
 }

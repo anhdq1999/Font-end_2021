@@ -22,4 +22,16 @@ export class ChinhTriComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/chinh-tri',item.title])
   }
+
+  isShow = true;
+  public term;
+  
+  keyWord() {
+    if (this.term ==''){
+      this.isShow= true;
+    }else{
+      this.isShow = false
+    }
+   
+  }
 }

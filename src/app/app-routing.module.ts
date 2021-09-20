@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, TestabilityRegistry } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { BanDocDetailComponent } from "./Component/ban-doc/ban-doc-detail/ban-doc-detail.component";
 import { BanDocComponent } from "./Component/ban-doc/ban-doc.component";
@@ -26,6 +26,7 @@ import { TalksDetailComponent } from "./Component/talks/talks-detail/talks-detai
 import { TalksComponent } from "./Component/talks/talks.component";
 import { TheGioiDetailComponent } from "./Component/the-gioi/the-gioi-detail/the-gioi-detail.component";
 import { TheGioiComponent } from "./Component/the-gioi/the-gioi.component";
+import { TheThaoDetailComponent } from "./Component/the-thao/the-thao-detail/the-thao-detail.component";
 import { TheThaoComponent } from "./Component/the-thao/the-thao.component";
 import { ThoiSuDetailComponent } from "./Component/thoi-su/thoi-su-detail/thoi-su-detail.component";
 import { ThoiSuComponent } from "./Component/thoi-su/thoi-su.component";
@@ -38,11 +39,12 @@ import { TuanVnDetailComponent } from "./Component/tuan-vn/tuan-vn-detail/tuan-v
 import { TuanVnComponent } from "./Component/tuan-vn/tuan-vn.component";
 import { XeDetailComponent } from "./Component/xe/xe-detail/xe-detail.component";
 import { XeComponent } from "./Component/xe/xe.component";
+import { TestComponent } from "./test/test.component";
 
 const routes: Routes = [
   { path: "trang-chu", component: TrangChuComponent },
   { path: "", redirectTo: "/trang-chu", pathMatch: "full" },
-  { path: "**", component: PageNotFoundComponent },
+  
   
   { path: "thoi-su", component: ThoiSuComponent },
   { path: "thoi-su/:title", component: ThoiSuDetailComponent },
@@ -75,7 +77,7 @@ const routes: Routes = [
   { path: "phap-luat/:title", component: PhapLuatDetailComponent },
 
   { path: "the-thao", component: TheThaoComponent },
-  { path: "the-thao/:title", component: TheGioiDetailComponent },
+  { path: "the-thao/:title", component: TheThaoDetailComponent },
 
   { path: "doi-song", component: DoiSongComponent },
   { path: "doi-song/:title", component: DoiSongComponent },
@@ -100,7 +102,8 @@ const routes: Routes = [
 
   { path: "ban-doc", component: BanDocComponent },
   { path: "ban-doc/:title", component: BanDocDetailComponent },
-
+  { path: "test", component: TestComponent },
+  { path: "**", component: PageNotFoundComponent },
  
   
   

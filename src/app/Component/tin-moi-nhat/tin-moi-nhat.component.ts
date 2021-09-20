@@ -21,5 +21,15 @@ export class TinMoiNhatComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/tin-moi-nhat',item.title])
   }
+  // search
+  isShow = true;
+  public term;
+  keyWord() {
+    if (this.term == "") {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
 
 }

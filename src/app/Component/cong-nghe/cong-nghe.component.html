@@ -1,3 +1,37 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a routerLink='/trang-chu'> <i class="fa fa-home" aria-hidden="true"></i>Trang Chủ</a>
+                    </li>
+                    <li class="breadcrumb-item " aria-current="page"> <i class="fa fa-users" aria-hidden="true"></i>Công nghệ</li>
+                    <li class="search">
+                        <input [(ngModel)]="term" class=" form-control me-2 " type="search " placeholder="Tìm kiếm..." aria-label="Search" (keyup)="keyWord()">
+
+                    </li>
+                </ol>
+
+            </nav>
+            <!-- [hidden]='isShow' -->
+            <div class="result" [hidden]='isShow'>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="list-group" id="list-tab" role="tablist" *ngFor="let item of dataNews.items | filter: term;">
+                            <a (click)="onSelect(item)" routerLink='' class="result-link list-group-item list-group-item-action " id="list-home-list" data-toggle="list" role="tab" aria-controls="home">{{  item.title}}</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <div class="list-news">
     <div class="container-fluid">
         <div class="row ">

@@ -10,9 +10,9 @@ import { ServesHttpService } from 'src/app/Service/service.service';
 })
 export class BatDongSanComponent implements OnInit {
   public dataNews : NewsRss;
-
+  
   constructor(private service : ServesHttpService, private router :Router ) { }
-
+  
   ngOnInit(): void {
     this.service.getBatDongSan().subscribe((data)=>{
       this.dataNews = data;
@@ -20,6 +20,18 @@ export class BatDongSanComponent implements OnInit {
   }
   onSelect(item : any){
     this.router.navigate(['/bat-dong-san',item.title])
+  }
+
+  isShow = true;
+  public term;
+  
+  keyWord() {
+    if (this.term ==''){
+      this.isShow= true;
+    }else{
+      this.isShow = false
+    }
+   
   }
 
 }

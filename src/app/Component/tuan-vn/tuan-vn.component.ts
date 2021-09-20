@@ -21,5 +21,15 @@ export class TuanVnComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/tuan-vn',item.title])
   }
-
+    // search
+    isShow = true;
+    public term;
+    keyWord() {
+      if (this.term == "") {
+        this.isShow = true;
+      } else {
+        this.isShow = false;
+      }
+    
+    }
 }

@@ -21,4 +21,14 @@ export class XeComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/xe',item.title])
   }
+  // search
+  isShow = true;
+  public term;
+  keyWord() {
+    if (this.term == "") {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
 }

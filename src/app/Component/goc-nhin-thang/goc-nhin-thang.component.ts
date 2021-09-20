@@ -21,5 +21,16 @@ export class GocNhinThangComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/goc-nhin-thang',item.title])
   }
+    // search
+    isShow = true;
+    public term;
+    keyWord() {
+      if (this.term ==''){
+        this.isShow= true;
+      }else{
+        this.isShow = false
+      }
+     
+    }
 
 }

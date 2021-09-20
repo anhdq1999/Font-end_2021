@@ -21,6 +21,15 @@ export class TinNongNhatComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/tin-nong-nhat',item.title])
   }
-  
+  // search
+  isShow = true;
+  public term;
+  keyWord() {
+    if (this.term == "") {
+      this.isShow = true;
+    } else {
+      this.isShow = false;
+    }
+  }
 
 }

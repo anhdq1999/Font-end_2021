@@ -10,6 +10,8 @@ import { ServesHttpService } from 'src/app/Service/service.service';
 })
 export class BanDocComponent implements OnInit {
   public dataNews : NewsRss;
+  isShow = true;
+  public term;
 
   constructor(private service : ServesHttpService ,private router :Router ) { }
   
@@ -21,5 +23,13 @@ export class BanDocComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/ban-doc',item.title])
   }
-  
+  keyWord() {
+    if (this.term ==''){
+      this.isShow= true;
+    }else{
+      this.isShow = false
+    }
+   
+  }
+
 }

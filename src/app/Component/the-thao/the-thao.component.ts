@@ -22,5 +22,16 @@ export class TheThaoComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/the-thao',item.title])
   }
+   // search
+ isShow = true;
+ public term;
+ keyWord() {
+   if (this.term ==''){
+     this.isShow= true;
+   }else{
+     this.isShow = false
+   }
+  
+ }
 
 }

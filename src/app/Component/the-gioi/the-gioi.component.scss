@@ -1,3 +1,26 @@
+.breadcrumb-bar {
+    nav {
+        margin-left: 10%;
+    }
+    nav>ol>li>i {
+        margin-right: 10px;
+    }
+    .search {
+        position: relative;
+        width: 40%;
+        margin-left: 20%;
+    }
+    .result {
+        position: absolute;
+        margin-top: 3%;
+        margin-left: 35%;
+        font-size: 0.8em;
+        .result-link:hover {
+            color: blue;
+        }
+    }
+}
+
 .left-news i,
 a {
     color: black;

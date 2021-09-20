@@ -21,5 +21,15 @@ export class PhapLuatComponent implements OnInit {
   onSelect(item : any){
     this.router.navigate(['/phap-luat',item.title])
   }
-
+ // search
+ isShow = true;
+ public term;
+ keyWord() {
+   if (this.term ==''){
+     this.isShow= true;
+   }else{
+     this.isShow = false
+   }
+  
+ }
 }

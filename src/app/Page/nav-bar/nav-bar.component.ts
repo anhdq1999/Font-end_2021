@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-
+ public keyWord;
+ public term;
+ items = [{ name: "archie" }, { name: "jake" }, { name: "richard" }];
   constructor() { }
 
   ngOnInit(): void {

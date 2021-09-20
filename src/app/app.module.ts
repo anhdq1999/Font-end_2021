@@ -46,6 +46,10 @@ import { TinNongNhatComponent } from "./Component/tin-nong-nhat/tin-nong-nhat.co
 import { TinNongNhatDetailComponent } from "./Component/tin-nong-nhat/tin-nong-nhat-detail/tin-nong-nhat-detail.component";
 import { TinMoiNhatDetailComponent } from "./Component/tin-moi-nhat/tin-moi-nhat-detail/tin-moi-nhat-detail.component";
 import { BanDocDetailComponent } from "./Component/ban-doc/ban-doc-detail/ban-doc-detail.component";
+import { FormsModule } from "@angular/forms";
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { TestComponent } from './test/test.component';
+
 
 @NgModule({
   declarations: [
@@ -93,8 +97,9 @@ import { BanDocDetailComponent } from "./Component/ban-doc/ban-doc-detail/ban-do
     TinNongNhatDetailComponent,
     TinMoiNhatDetailComponent,
     BanDocDetailComponent,
+    TestComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,FormsModule,Ng2SearchPipeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
